@@ -16,27 +16,28 @@ $(document).ready(function() {
 
 
 
-// A little Angular JS for the make a pattern tool
+  // A little Angular JS for the make a pattern tool
 
-angular.module('styleGuide', []).controller('StyleGuideController', function() {
+	angular.module('styleGuide', []).controller('StyleGuideController', function() {
+	
+	  var styleGuide = this;
+	      styleGuide.colors = [
+	        {value: '#f0c'},
+	        {value: '#bee'}];
+	
+	  styleGuide.addColor = function () {
+	    if (styleGuide.styleColor == 'caramel') {
+	      styleGuide.colors.push({value: '#CC9966'});
+	    }
+	    else {
+	      styleGuide.colors.push({value: styleGuide.styleColor});
+	    }
+	    styleGuide.styleColor = '';
+	  }
+	
+	  styleGuide.removeColors = function () {
+	    styleGuide.colors = [];
+	  }
+	
+	});
 
-  var styleGuide = this;
-      styleGuide.colors = [
-        {value: '#f0c'},
-        {value: '#bee'}];
-
-  styleGuide.addColor = function () {
-    if (styleGuide.styleColor == 'caramel') {
-      styleGuide.colors.push({value: '#CC9966'});
-    }
-    else {
-      styleGuide.colors.push({value: styleGuide.styleColor});
-    }
-    styleGuide.styleColor = '';
-  }
-
-  styleGuide.removeColors = function () {
-    styleGuide.colors = [];
-  }
-
-});

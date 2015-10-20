@@ -18,6 +18,5 @@ permalink: pretty
 #Let's Compress
 style: compressed
 
-
 gems:
   - jekyll-angular

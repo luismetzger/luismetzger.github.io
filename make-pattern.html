@@ -12,11 +12,14 @@ title: Make Pattern
         </form>
         <button class="remove-button" ng-click="styleGuide.removeColors()">remove all colors</button>
         <ol class="color-set">
-          <li ng-repeat="colors in styleGuide.colors" style="background:{{colors.value}};">
-            <p>{{colors.value}}</p>
-            <p>{{colors.value}}</p>
+	   
+          <li ng-repeat="colors in styleGuide.colors" style="background:{{ 'colors.value' | angular }};">
+            <p>{{ 'colors.value' | angular }}</p>
+            <p>{{ 'colors.value' | angular }}</p>
           </li>
+    
         </ol>
       </section>
     </div>
   </div>
+ 
