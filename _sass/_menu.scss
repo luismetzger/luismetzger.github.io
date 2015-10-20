@@ -1,0 +1,152 @@
+/* Let's start with the basic nav */
+.sidebar {
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background-color: $color-purple;
+	width: 200px;
+   z-index: 999;
+	height: 100%;
+	border-right: 1px solid $textcolor-dark;
+
+
+  img {
+    margin: 0 auto;
+    vertical-align: middle;
+
+  }
+
+  .logo {
+			width: 200px;
+      height: auto;
+      text-align: center;
+
+
+  }
+  .navigation {
+    border-top: 1px solid $color-border;
+    background-color: $textcolor-light;
+    flex-flow: column wrap;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-transform: uppercase;
+      display: block;
+      padding: 2em 1em;
+      border-bottom: 1px solid $textcolor-dark;
+      text-decoration: none;
+      color: #463265;
+    }
+		&:hover {
+      color: $color-purple;
+			background-color: $textcolor-light;
+    }
+
+    ul {
+      border-top: 1px solid $color-border;
+
+      li {
+
+        &:last-of-type {
+
+          a {
+            border-bottom: none;
+          }
+					&:hover {
+						color: $color-purple;
+						background-color: $textcolor-light;
+					}
+        }
+      }
+    }
+
+
+    .dropdown {
+      border: 0;
+      display: none;
+
+
+      a {
+          background-color: #463265;
+          color: #fff;
+      }
+			&:hover {
+				color: $color-purple;
+				background-color: $textcolor-light;
+			}
+    }
+    :hover .dropdown{
+      display: block;
+
+    }
+    a.active + .dropdown {
+        display: block;
+    }
+    .active {
+        background-color: #0a5fa3;
+        color: #ffffff;
+    }
+  }
+}
+
+    @media all and (max-width: $M) {
+      justify-content: space-around;
+       .sidebar{
+		    width: 100%;
+		    text-align: left;
+		    height:60px;
+				background-color: #563d7c;
+		    .logo{
+					height: auto;
+					float: left;
+					width: 75px;
+		    }
+		    .navigation{
+		      display: inline-block;
+		      width: calc(100% - 120px);
+		      text-align: right;
+					background-color: #563d7c;
+					border-top: 1px solid #563d7c;
+		      &:hover {
+		        color: #828282;
+		        background-color: transparent;
+		      }
+		      li{
+		        display: inline-block;
+		      }
+		      a{
+		        font-size: 0.8em;
+		        padding: 1.7em 1em;
+		        border: 0;
+						color: $textcolor-light;
+		        &:hover{
+		          background-color: #ebebeb;
+        }
+      }
+    }
+  }
+
+    }
+    @media all and (max-width: $S) {
+      flex-flow: column wrap;
+      padding: 0;
+		        .sidebar{
+					    height:40px;
+					    .logo{
+					      height: 40px
+					    }
+					    .navigation{
+					      width: calc(100% - 80px);
+					      a{
+					        font-size: 0.63em;
+					    padding: 1.3em 0.3em;
+					    border: 0;
+		      }
+		    }
+		  }
+    }

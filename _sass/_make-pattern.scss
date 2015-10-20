@@ -1,0 +1,146 @@
+// ================
+// Section
+//
+
+section {
+  @media all  and (max-width: $M) {
+    padding: 3.5em 0;
+  }
+}
+
+
+// ================
+// Generic Form
+// ================
+
+input,
+button {
+  border: 0;
+  padding: 1em 1.5em;
+  color: $textcolor-light;
+  transition:
+    background .3s,
+    box-shadow .3s,
+    color .3s,
+    outline .3s;
+  @media all  and (max-width: $M) {
+    padding: 2em 2.7em;
+  }
+}
+
+::input-placeholder {
+  color: $color-light-purple;
+}
+
+
+// ================
+// Color Form
+// ================
+
+.color-form {
+  padding: 1.5em;
+  background: $color-really-dark-blue;
+
+  @media all and (min-width: $S) {
+    display: flex;
+  }
+
+  input {
+
+    &:first-child {
+      width: 100%;
+      background: rgba($color-light-purple, .15);
+      border-radius: .5em .5em 0 0;
+      color: #fff;
+
+      @media all and (min-width: $S) {
+        flex: 2;
+        border-radius: .5em 0 0 .5em;
+        box-shadow: inset 0 0 0 0 $color-light-purple;
+
+      }
+      @media all and (max-width: $M) {
+        font-size: 1em;
+        flex: 1.5
+      }
+
+    }
+
+    &:last-child {
+      width: 100%;
+      border-radius: 0 0 .5em .5em;
+      background: #aae;
+
+      @media (min-width: $S) {
+        flex: 1;
+        border-radius: 0 .5em .5em 0;
+      }
+
+      &:hover {
+        background: darken(#aae, 5%);
+        box-shadow: inset 0 -.25em 0 0 darken($color-light-purple, 10%);
+      }
+
+    }
+
+  }
+
+}
+
+
+// ================
+// Colors
+// ================
+
+.color-set {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: $S) {
+    display: flex;
+    height: calc(100vh - #{99 / 16 * 1em});
+  }
+
+  li {
+    padding: 1em;
+    width: 100%;
+  }
+
+  p {
+
+    &:nth-of-type(even) {
+      color: $textcolor-light;
+    }
+
+  }
+
+}
+
+
+// ================
+// Remove Colors
+// ================
+
+.remove-button {
+  position: fixed;
+  bottom: .75em;
+  left: .5em;
+  z-index: 200;
+  background: $color-salmon;
+  border-radius: .5em;
+  box-shadow: 0 .25em 0 0 darken($color-salmon, 5%);
+
+  @media (min-width: $S) {
+    bottom: 1.25em;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &:hover {
+    background: darken(#eaa, 5%);
+    box-shadow: 0 .25em 0 0 darken($color-salmon, 10%);
+  }
+
+}

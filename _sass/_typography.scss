@@ -1,0 +1,97 @@
+#wrapper {
+  padding: 3%;
+}
+
+.logo {
+
+  h1 {
+    color: $color-dark-gray;
+    margin: 0;
+    font-size: $h1;
+    text-align: center;
+    @media all and (max-width: $M) {
+      padding-top: 80px;
+    }
+  }
+}
+
+.description {
+  line-height: 1.75;
+
+  h1 {
+    font-size: $h1;
+  }
+  h2 {
+    font-size: $h2;
+  }
+  h3 {
+    font-size: $h3;
+  }
+  h4 {
+    font-size: $h4;
+  }
+  h5 {
+    font-size: $h5;
+  }
+  h6 {
+    font-size: $h6;
+  }
+}
+
+.example, .html, .css {
+  border-radius: 4px;
+  color: $color-dark-gray;
+  font-size: $default-text;
+  line-height: 1.5;
+  margin: 22.5px auto;
+  padding: 18px;
+  position: relative;
+
+  a {
+    clear: both;
+    color: $color-medium-gray;
+    opacity: 0.4;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    margin: 0 0 0 12px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.mod-content {
+  margin-top: 6px;
+  h3 {
+    text-align: left;
+    font-size: $h3;
+  }
+}
+.example {
+  background-color: $color-light-gray;
+}
+.html, .css {
+  background-color: $color-dark-gray;
+  color: $color-ultralight-gray;
+  font-family: Inconsolata;
+  font-size: 1.05em;
+  a {
+    color: $color-light-gray;
+  }
+}
+
+.label {
+  float: left;
+  margin: -18px 0 0 -18px;
+
+  h3 {
+    color: $textcolor-light;
+    background-color: $color-yellow-alert;
+    border-top-left-radius: 4px;
+    font-family: Open Sans;
+    font-size: $h4;
+    font-weight: 600;
+    margin: 0;
+    padding: 6px 9px;
+  }
+}

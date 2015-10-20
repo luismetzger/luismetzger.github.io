@@ -1,0 +1,22 @@
+---
+layout: page
+title: Make Pattern
+---
+
+  <div class="row full_width_content">
+      <div class="col-md-12 no_padding">
+      <section ng-app="styleGuide" ng-controller="StyleGuideController as styleGuide">
+        <form ng-submit="styleGuide.addColor()" class="color-form">
+          <input ng-model="styleGuide.styleColor" type="text" placeholder="enter in a hex color or a css color alias"/>
+          <input type="submit" value="+ add color"/>
+        </form>
+        <button class="remove-button" ng-click="styleGuide.removeColors()">remove all colors</button>
+        <ol class="color-set">
+          <li ng-repeat="colors in styleGuide.colors" style="background:{{colors.value}};">
+            <p>{{colors.value}}</p>
+            <p>{{colors.value}}</p>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </div>
