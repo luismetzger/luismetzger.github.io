@@ -13,6 +13,7 @@
     color: $color-dark-gray;
   }
 }
+
 .sass-logo {
   padding: 100px 0;
   width: 500px;
@@ -24,6 +25,12 @@
     padding-left: 0;
     left: 50%;
     margin-left: -150px;
+  }
+  
+  svg {
+	   @media all and (max-width: $M) {
+		   width: 300px;
+	   }
   }
 }
 @media all and (max-width: $M) {
