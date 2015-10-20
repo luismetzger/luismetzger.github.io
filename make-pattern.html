@@ -13,7 +13,7 @@ title: Make Pattern
         <button class="remove-button" ng-click="styleGuide.removeColors()">remove all colors</button>
         <ol class="color-set">
 	   
-          <li ng-repeat="colors in styleGuide.colors" bind-translate="colors.value" style="background:{{ 'colors.value' | angular }};">
+          <li ng-repeat="colors in styleGuide.colors" bind-translate="colors.value" ng-bind="colors.value" style="background:{{ 'colors.value' | angular }};">
             <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
             <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
           </li>
