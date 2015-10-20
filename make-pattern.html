@@ -11,9 +11,9 @@ title: Make Pattern
           <input type="submit" value="+ add color"/>
         </form>
         <button class="remove-button" ng-click="styleGuide.removeColors()">remove all colors</button>
-        <ol class="color-set">
+        <ol class="color-set" >
 	   
-          <li ng-repeat="colors in styleGuide.colors" ng-bind="colors.value" style="background:{{ colors.value | angular }};">
+          <li ng-repeat="colors in styleGuide.colors" style="background:{{ 'colors.value' | angular }};">
             <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
             <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
           </li>
