@@ -14,8 +14,8 @@ title: Make Pattern
         <ol class="color-set">
 	   
           <li ng-repeat="colors in styleGuide.colors" ng-bind="colors.value" style="background:{{ 'colors.value' | angular }};">
-            <p>{{ 'colors.value' | angular }}</p>
-            <p>{{ 'colors.value' | angular }}</p>
+            <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
+            <p ng-bind="colors.value">{{ 'colors.value' | angular }}</p>
           </li>
     
         </ol>
